@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="today" type="Date" default=""/>
+    
+    <ui:inputDate aura:id="expdate" label="Today's Date" class="field" format="M/d/yyyy" value="{!v.today}" displayDatePicker="true" />      
+    <ui:button class="btn" label="Submit" press="{!c.setOutput}"/> 
+    
+    <div aura:id="msg">
+        <ui:outputDate aura:id="oDate" value="" />
+    </div>
+</aura:component>
